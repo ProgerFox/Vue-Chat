@@ -1,20 +1,24 @@
 <template>
-  <div id='App'>
-    <ChatContainer>
-      <ChatMessage :username = "username" :datetime = "datatime" ></ChatMessage>
-    </ChatContainer>
+  <div id='app'>
+    <ChatWindow>
+      <ChatContainer>
+        <ChatMessage :username = "username" :datetime = "datatime" ></ChatMessage>
+      </ChatContainer>
+    </ChatWindow>
   </div>
 </template>
 
 <script>
 import ChatContainer from './components/ChatContainer.vue'
 import ChatMessage from './components/ChatMessage.vue'
+import ChatWindow from './components/ChatWindow.vue'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
     ChatContainer,
-    ChatMessage
+    ChatMessage,
+    ChatWindow
   },
   data(){
     return {
@@ -26,7 +30,7 @@ export default {
 </script>
 
 <style>
-#app {
+#App {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
