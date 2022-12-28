@@ -1,11 +1,13 @@
 <template>
     <div class="container">
-        <slot>message</slot>
+        <slot></slot>
     </div>
 </template>
 
 <script>
-
+export default {
+    name: 'ChatContainer'
+}
 </script>
 
 <style>
